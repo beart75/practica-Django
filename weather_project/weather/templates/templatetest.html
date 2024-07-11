@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>VISTA DEL TIEMPO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <h1>LOGIN :</h1>
+  <p>Este es mi nombre: {{ nombre }}</p>
+  <ol>
+      {% for usuario in usuarios %}
+          <li>{{ usuario|title }}</li>
+      {% endfor %}
+  </ol>
+      {% if modo_debug is True %}
+          <ol>
+            <p>lista de contraseñas:</p>
+              {% for contrasena in contrasenas %}
+                  <li>{{ contrasena }}</li>
+              {% endfor %}
+          </ol> 
+      {% else %}
+          <p>Modo debug esta off</p>
+      {% endif %}
+</body>
+</html>

@@ -20,7 +20,7 @@ import weather.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("tiempo/", include("weather.urls"))
+    path("app/", include("weather.urls"))
 ]
 
 

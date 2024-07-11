@@ -1,0 +1,23 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>VISTA DEL TIEMPO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="=text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <h1>EL TIEMPO EN {{ location }}</h1>
+    <p>Temperatura {{ temperature }}</p>
+    <p>Clima:  {{ condicition }}</p>
+    <p>Fecha:  ---{{ date }}</p>
+    <p>APIKEY :  ---{{ api_key }}</p>
+
+    {% block usuarios %}{% endblock %}
+    {% block contrasenas %}{% endblock %}
+    
+</body>
+</html>

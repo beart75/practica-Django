@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+  Vista del tiempo - principal
+{% endblock %}
+
+{% block usuarios %}
+<ol>
+  {% for usuario in usuarios %}
+      <li>{{ usuario|title }}</li>
+  {% endfor %}
+</ol>
+{% endblock %}
+
+{% block contrasenas %}
+{% if modo_debug is True %}
+          <ol>
+            <p>lista de contraseñas:</p>
+              {% for contrasena in contrasenas %}
+                  <li>{{ contrasena }}</li>
+              {% endfor %}
+          </ol> 
+      {% else %}
+          <p>Modo debug esta off</p>
+      {% endif %}
+{% endblock %}
