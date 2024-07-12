@@ -30,7 +30,7 @@ def cargarperritos(request):
 
 def widget_tiempo(request):
     #api_key = settings.KEY
-    ciudad = "Albacete"
+    ciudad = "Galicia"
     #url = f"https://api.openweathermap.org/data/2.5/weather?q={ciudad.upper()}&appid={api_key}&units=metric"
     #respuesta = requests.get(url)
     respuesta = llamar_api(ciudad)
