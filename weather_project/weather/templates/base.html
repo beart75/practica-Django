@@ -4,20 +4,57 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>VISTA DEL TIEMPO</title>
+  <title>{% block titulo %}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="=text/css" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" type="=text/css" href="/static/css/styles.css">
+  <style>
+    body {
+    background-color: #e0f7fa;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #0277bd;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #01579b;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+form {
+    margin-bottom: 50px;
+}
+  </style>
 </head>
 
 <body>
-    <h1>EL TIEMPO EN {{ location }}</h1>
+  <div class="container">
+    <h1>El tiempo en {{ location|title }}</h1>
     <p>Temperatura {{ temperature }}</p>
     <p>Clima:  {{ condicition }}</p>
-    <p>Fecha:  ---{{ date }}</p>
-    <p>APIKEY :  ---{{ api_key }}</p>
-
-    {% block usuarios %}{% endblock %}
-    {% block contrasenas %}{% endblock %}
+    <p>Fecha:  {{ date }}</p>
+    <!--<p>APIKEY :  {{ api_key }}</p>
+     {% block usuarios %}{% endblock %} 
+     {% block contrasenas %}{% endblock %} -->
+  </div>
     
 </body>
 </html>
